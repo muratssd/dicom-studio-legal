@@ -1,35 +1,47 @@
 {
-  "version": 1,
-  "source": "https://github.com/pydicom/pydicom-data/tree/abc42b90985fb6cf385aa4af766d2c9c94a257a4",
-  "license": "MIT",
+  "version": 2,
+  "format": "DICOM ZIP, Explicit VR Little Endian",
   "studies": [
     {
-      "id": "ct-head",
-      "file": "head-ct.dcm",
-      "modality": "CT",
-      "bytes": 526324,
-      "sha256": "42d6c33d6666bf569a53951211be6fca2ab04956db43c3f75a9720d976ab128c"
-    },
-    {
-      "id": "mr-head",
-      "file": "head-mr.dcm",
+      "id": "brain-mri",
+      "file": "brain-mri.zip",
+      "source": "https://minipacs.net/free-dicom-viewer/",
       "modality": "MR",
-      "bytes": 2099286,
-      "sha256": "7f79ac33e1ab32e1a8ca10ce62f18e5a2372e78c8a6684af17302b1a0171fc46"
+      "instances": 144,
+      "series": 3,
+      "bytes": 9982194,
+      "sha256": "3665a232153e61d19a3737fb5d3ecf0112dce9ff2a6da418c8f79de79585b374"
     },
     {
-      "id": "xray-chest",
-      "file": "chest-xray.dcm",
-      "modality": "CR",
-      "bytes": 7200356,
-      "sha256": "3561020824868615a93a51078671b3ff73bb2578c966f76def99b4d982897e75"
+      "id": "petct-neck",
+      "file": "petct-neck.zip",
+      "source": "https://minipacs.net/free-dicom-viewer/",
+      "modality": "PT/CT",
+      "instances": 166,
+      "series": 2,
+      "bytes": 17223969,
+      "sha256": "912fa9ab48a99b07dcfd4589fa81af8e4b6e06e45118237c46244660cdda91a0"
     },
     {
-      "id": "ultrasound-rgb",
-      "file": "ultrasound.dcm",
-      "modality": "US",
-      "bytes": 923170,
-      "sha256": "b7556a5414d5ed6bd0359b8222eda10efcce81762428848d9a3ac6be5b55cb6c"
+      "id": "ct-ankle",
+      "file": "ct-ankle.zip",
+      "source": "https://minipacs.net/free-dicom-viewer/",
+      "modality": "CT",
+      "instances": 250,
+      "series": 1,
+      "bytes": 50437136,
+      "sha256": "c45d8862410eb688215b990460b6c04b867f694c85af8b74eeb432e792178fb8"
+    },
+    {
+      "id": "head-ct",
+      "file": "head-ct.zip",
+      "source": "https://github.com/neurolabusc/dcm_qa_ct",
+      "license": "BSD-2-Clause",
+      "modality": "CT",
+      "instances": 28,
+      "series": 1,
+      "bytes": 6077821,
+      "sha256": "56e13cb4fa14a2028414771c4b9f677ff00312decacd9a15fa86ae9dc4283fb3"
     }
   ]
 }

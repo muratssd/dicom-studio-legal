@@ -1,19 +1,28 @@
 # DICOM Studio sample studies
 
-These files are public, non-clinical sample data used by DICOM Studio's
-free **Sample studies** feature. They are copied from the
-[`pydicom-data`](https://github.com/pydicom/pydicom-data) test-data repository
-at commit `abc42b90985fb6cf385aa4af766d2c9c94a257a4`.
+These archives contain real, multi-instance DICOM studies used by DICOM
+Studio's free **Sample studies** feature. They are public, de-identified
+teaching and software-validation datasets. They must not be used for diagnosis
+or treatment.
 
-The files are provided only for software demonstration, education, and image
-review. They must not be used for diagnosis or treatment.
+The MiniPACS studies are derived from the Orthanc project's public demo data
+and published as de-identified teaching cases by
+[MiniPACS](https://minipacs.net/free-dicom-viewer/). DICOM Studio removed
+patient-identifying fields and private tags again, then converted the JPEG-LS
+pixel data to uncompressed Explicit VR Little Endian DICOM so the samples work
+offline with the app's standard decoder.
 
-The upstream repository is distributed under the MIT License. See
-`LICENSE-pydicom-data.txt` in this directory.
+The head CT comes from Chris Rorden's
+[`dcm_qa_ct`](https://github.com/neurolabusc/dcm_qa_ct) validation dataset and
+is redistributed under the BSD 2-Clause License. See
+`LICENSE-dcm-qa-ct.txt`.
 
-| File | Modality | SHA-256 |
-| --- | --- | --- |
-| `head-ct.dcm` | CT | `42d6c33d6666bf569a53951211be6fca2ab04956db43c3f75a9720d976ab128c` |
-| `head-mr.dcm` | MR | `7f79ac33e1ab32e1a8ca10ce62f18e5a2372e78c8a6684af17302b1a0171fc46` |
-| `chest-xray.dcm` | CR | `3561020824868615a93a51078671b3ff73bb2578c966f76def99b4d982897e75` |
-| `ultrasound.dcm` | US | `b7556a5414d5ed6bd0359b8222eda10efcce81762428848d9a3ac6be5b55cb6c` |
+| File | Modality | Images / series | SHA-256 |
+| --- | --- | --- | --- |
+| `brain-mri.zip` | MR | 144 / 3 | `3665a232153e61d19a3737fb5d3ecf0112dce9ff2a6da418c8f79de79585b374` |
+| `petct-neck.zip` | PT + CT | 166 / 2 | `912fa9ab48a99b07dcfd4589fa81af8e4b6e06e45118237c46244660cdda91a0` |
+| `ct-ankle.zip` | CT | 250 / 1 | `c45d8862410eb688215b990460b6c04b867f694c85af8b74eeb432e792178fb8` |
+| `head-ct.zip` | CT | 28 / 1 | `56e13cb4fa14a2028414771c4b9f677ff00312decacd9a15fa86ae9dc4283fb3` |
+
+Each archive was imported by DICOM Studio's production import pipeline and
+indexed as a multi-image DICOM study before publication.
